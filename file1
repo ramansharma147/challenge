@@ -1,0 +1,88 @@
+Please describe in detail 3-5 of the most significant challenges your team will face over the next year
+
+I have gone through the current situation and there will be lots of challenges our team will face considering with current setup. The most significant challenges  would be:
+
+Current Architecture:
+
+ As I have gone through the current situation, the application is built as a single and indivisible unit. Thus the architecture is based on a monolithic approach. The monolithic architecture is considered to be a traditional way of building applications. Usually, such a solution comprises a client-side user interface, a server side-application, and a database. It is unified and all the functions are managed and served in one place. With this type of setup, if any single element goes down then the whole application get impacted or get down. 
+
+Hard to understand: 
+
+When a monolithic application scales up, it becomes too complicated to understand. Also, a complex system of code within one application is hard to manage.
+
+Making changes is hard
+
+It is harder to implement changes in such a large and complex application with highly tight coupling. Any code change affects the whole system so it has to be thoroughly coordinated. This makes the overall development process much longer.
+
+Scalability issue
+
+We cannot scale components independently, because with the current setup all the components are dependent on each other. So we can’t scale the components individually, we can only scale the whole applications
+
+New technology barriers
+
+ It is extremely problematic to apply a new technology in a monolithic application because then the entire application has to be rewritten.
+
+Lack of Monitoring 
+
+As the monitoring has still not configured so nobody would get to know when the application get down or when the application back online. Also it becomes very hard to troubleshoot with the lack of monitoring and the clients will not get the good results
+
+Propose a Strategy for overcoming each of these challenges, keeping in mind the 5 Ws: Who, What, Where, When and Why
+
+
+In order to overcome each of these challenges we need to do the following things:
+
+Move to MicroServices based Stack:
+
+The very first step is to move the application to the MicroServices based stack. Some of the benefits of Microservice based architecture would be:
+
+* Independent components. Firstly, all the services can be deployed and updated independently, which gives more flexibility. Secondly, a bug in one microservice has an impact only on a particular service and does not influence the entire application. Also, it is much easier to add new features to a microservice application than a monolithic one.
+* Easier understanding. Split up into smaller and simpler components, a microservice application is easier to understand and manage. You just concentrate on a specific service that is related to a business goal you have.
+* Better scalability. Another advantage of the microservices approach is that each element can be scaled independently. So the entire process is more cost- and time-effective than with monoliths when the whole application has to be scaled even if there is no need in it. In addition, every monolith has limits in terms of scalability, so the more users you acquire, the more problems you have with your monolith. Therefore, many companies, end up rebuilding their monolithic architectures.
+* Flexibility in choosing the technology. The engineering teams are not limited by the technology chosen from the start. They are free to apply various technologies and frameworks for each microservice.
+* The higher level of agility. Any fault in a microservices application affects only a particular service and not the whole solution. So all the changes and experiments are implemented with lower risks and fewer errors.
+
+Setting up the monitoring for all the components
+ 
+Monitoring is an essential part of an application. Detecting, diagnosing, and remedying problems in the various environments requires monitoring capabilities that go well beyond simple, one-dimensional visibility. With the help of monitoring we can achieve the following things: 
+
+Full-Stack Infrastructure Visibility
+Your environment relies on a wide range of servers and services—think operating systems, enterprise servers, cloud servers, storage, virtual machines, etc. Each may have its own monitoring tools, giving you visibility into that “niche” of your infrastructure. You can collect the data from those independent components. using full-stack and application-centric capacity management can prevent most problems before they have a chance to cause downtime or breach SLAs.
+
+Application-Centric Visibility
+application performance monitoring focus on behavior of the application, its code, and supporting runtime environments. The main functions of Application monitoring is to provide app dashboards and alerts, to observe app components, Tracking how one event connects across multiple nodes to detect the origins of errors, a visual representation of how requests travel between services, etc.
+
+Capacity Management
+Your monitoring solution shouldn’t just focus on what’s happening right now, it should also provide capacity insight to help you keep your application infrastructure aligned with business needs—and eliminate the risk and expense that results from poor capacity planning. This means you need to track utilization across the entire infrastructure stack and track capacity trends at scale. By combining your health and performance data with capacity information and alerts, you’ll understand your resourcing trends and capacity needs throughout your environment.
+
+
+Workload Balancing
+It’s important to identify problems as they occur and then quickly fix them, but it’s even better to keep your workloads balanced to prevent performance issues in the first place. A right-sizing process, automatically or periodically run, can identify and correct workload imbalances before they strain resources and affect performance. 
+
+Problem Resolution
+Getting visibility is only the first step. It’s simply the means to enable you to quickly pinpoint bottlenecks, wherever they occur, and resolve the problem. To streamline this process—so you can minimize or even avoid slowdowns and outages—you need your monitoring solution to alert you in real time and provide the relevant information across the application-to-infrastructure topology you need to contextualize the problem. The best solutions will also automatically identify the remediation needed, so that it can be pushed to change management system to comply with internal risk and change management policies and tracking.
+
+Use CI/CD Pipelines
+
+We should CI/CD Pipeline mechanism for our development process. Some of the key benefits of this approach are:
+
+Reduce risk
+Finding and fixing bugs late in the development process is expensive and time-consuming. This is especially true when there are issues with features that have already been released to production.
+With a CI/CD pipeline, you can test and deploy code more frequently, giving testers the ability to detect issues as soon as they occur and to fix them immediately. You are essentially mitigating risks in real time.
+
+Deliver faster
+
+Teams can build, test and deploy features automatically with almost no manual intervention. So it can deliver the outcomes rapidly.
+
+Expend less manual effort
+
+This is also a vital component of having a successful CI/CD implementation. Once you build features and check in code, tests should be automatically triggered to make sure that the new code does not break existing features and that the new features are working correctly.
+After the tests run, the code gets deployed to different environments, including QA, staging and production. Throughout this process, you will be getting constant notifications through different channels, giving you plenty of information about the build, test and deploy cycles.
+
+Generate extensive logs
+Observability is one of the biggest aspects of DevOps and CI/CD integration. If something is wrong, you need to understand why. You need a mechanism to study the system in production over time and identify key performance metrics. Observability is a technical solution that helps in this effort.
+One key aspect of observability is logging information. Logs are a rich source of information to understand what is happening beneath the UI and study application behavior.
+With a CI/CD pipeline, extensive logging information is generated in each stage of the development process. There are various tools available to analyze these logs effectively and get immediate feedback about the system.
+
+Make easier rollbacks
+One of the biggest advantages of a CI/CD pipeline is you can roll back changes quickly. If any new code changes break the production application, you can immediately return the application to its previous state. Usually, the last successful build gets immediately deployed to prevent production outages.
+
